@@ -29,3 +29,11 @@ dependencies {
     // testCompile 'junit:junit:4.12'
 }
 
+task dorun(type: JavaExec) {
+    main = mainClassName
+    classpath = sourceSets.main.runtimeClasspath
+
+
+    environment "GOOGLE_APPLICATION_CREDENTIALS", "/home/ruksana/project/gauthfile.json"
+    environment "RECORDED_FILES_DIR", "/home/ruksana/Desktop/wavfiles"
+}
